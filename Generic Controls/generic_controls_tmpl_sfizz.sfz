@@ -43,6 +43,44 @@
 
 <control>
 
+//set cc value for your preset
+//range from 0 to 1
+
+set_hdcc$CUTOFF=1
+set_hdcc$RESO=0
+//
+set_hdcc$AMP_DELAY=0
+set_hdcc$AMP_ATTACK=0
+set_hdcc$AMP_HOLD=0
+set_hdcc$AMP_DECAY=0
+set_hdcc$AMP_SUSTAIN=1
+set_hdcc$AMP_RELEASE=0
+//
+set_hdcc$MOD_DELAY=0
+set_hdcc$MOD_ATTACK=0
+set_hdcc$MOD_HOLD=0
+set_hdcc$MOD_DECAY=0
+set_hdcc$MOD_SUSTAIN=0
+set_hdcc$MOD_RELEASE=0
+set_hdcc$MOD_PITCH=0.5
+set_hdcc$MOD_FILTER=0.5
+//
+set_hdcc$LFO1_DELAY=0
+set_hdcc$LFO1_FREQ=0.5
+set_hdcc$LFO1_PITCH=0
+set_hdcc$LFO1_FILTER=0
+set_hdcc$LFO1_VOLUME=0
+//
+set_hdcc$LFO2_DELAY=0
+set_hdcc$LFO2_FREQ=0.5
+set_hdcc$LFO2_PITCH=0
+set_hdcc$LFO2_PAN=0
+//
+set_hdcc$AMP_VEL=1
+set_hdcc$OFFSET=0
+
+// --------------------------------------
+
 //main
 label_cc7=Vol
 label_cc10=Pan
@@ -52,7 +90,6 @@ set_hdcc10=0.5
 //filter
 label_cc$CUTOFF=Cutoff
 label_cc$RESO=Reso
-set_hdcc$CUTOFF=1
 
 //amp env
 label_cc$AMP_DELAY=Delay
@@ -61,8 +98,6 @@ label_cc$AMP_HOLD=H
 label_cc$AMP_DECAY=D
 label_cc$AMP_SUSTAIN=S
 label_cc$AMP_RELEASE=R
-set_hdcc$AMP_SUSTAIN=1
-set_hdcc$AMP_RELEASE=0
 
 //mod env
 label_cc$MOD_DELAY=Mod-Delay
@@ -73,8 +108,6 @@ label_cc$MOD_SUSTAIN=Mod-S
 label_cc$MOD_RELEASE=Mod-R
 label_cc$MOD_PITCH=Mod > Pitch
 label_cc$MOD_FILTER=Mod > Filter
-set_hdcc$MOD_PITCH=0.5
-set_hdcc$MOD_FILTER=0.5
 
 //lfo1
 label_cc$LFO1_DELAY=Lfo1 Delay
@@ -82,18 +115,15 @@ label_cc$LFO1_FREQ=Lfo1 Freq
 label_cc$LFO1_PITCH=Lfo1 > Pitch
 label_cc$LFO1_FILTER=Lfo1 > Filter
 label_cc$LFO1_VOLUME=Lfo1 > Volume
-set_hdcc$LFO1_FREQ=0.5
 
 //lfo2
 label_cc$LFO2_DELAY=Lfo2 Delay
 label_cc$LFO2_FREQ=Lfo2 Freq
 label_cc$LFO2_PITCH=Lfo2 > Pitch
 label_cc$LFO2_PAN=Lfo2 > Pan
-set_hdcc$LFO2_FREQ=0.5
 
 //veltrack
 label_cc$AMP_VEL=Amp.Vel
-set_hdcc$AMP_VEL=1
 
 //sample start
 label_cc$OFFSET=Offset
