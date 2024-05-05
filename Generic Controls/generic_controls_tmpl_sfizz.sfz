@@ -159,7 +159,6 @@ ampeg_hold_curvecc$AMP_HOLD=4
 ampeg_decay_oncc$AMP_DECAY=50
 ampeg_decay_curvecc$AMP_DECAY=4
 ampeg_sustain_oncc$AMP_SUSTAIN=100
-ampeg_sustain_curvecc$AMP_SUSTAIN=4
 ampeg_release_oncc$AMP_RELEASE=50
 ampeg_release_curvecc$AMP_RELEASE=4
 ampeg_sustain=0
