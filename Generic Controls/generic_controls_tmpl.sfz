@@ -1,0 +1,192 @@
+// --------------------------------------
+// SFZ format v2 with ARIA extensions
+// Generic controls template
+// Created by Kinwie
+// --------------------------------------
+
+
+//midi cc
+#define $CUTOFF 17
+#define $RESO 18
+
+#define $AMP_DELAY 19
+#define $AMP_ATTACK 20
+#define $AMP_HOLD 21
+#define $AMP_DECAY 22
+#define $AMP_SUSTAIN 23
+#define $AMP_RELEASE 24
+
+#define $MOD_DELAY 25
+#define $MOD_ATTACK 26
+#define $MOD_HOLD 27
+#define $MOD_DECAY 28
+#define $MOD_SUSTAIN 29
+#define $MOD_RELEASE 30
+#define $MOD_PITCH 31
+#define $MOD_FILTER 32
+
+#define $LFO1_DELAY 33
+#define $LFO1_FREQ 34
+#define $LFO1_PITCH 35
+#define $LFO1_FILTER 36
+#define $LFO1_VOLUME 37
+
+#define $LFO2_DELAY 38
+#define $LFO2_FREQ 39
+#define $LFO2_PITCH 40
+#define $LFO2_PAN 41
+
+#define $AMP_VEL 42
+#define $OFFSET 43
+
+// --------------------------------------
+
+<control>
+
+//main
+label_cc7=Vol
+label_cc10=Pan
+set_cc7=100
+set_hdcc10=0.5
+
+//filter
+label_cc$CUTOFF=Cutoff
+label_cc$RESO=Reso
+set_hdcc$CUTOFF=1
+
+//amp env
+label_cc$AMP_DELAY=Delay
+label_cc$AMP_ATTACK=A
+label_cc$AMP_HOLD=H
+label_cc$AMP_DECAY=D
+label_cc$AMP_SUSTAIN=S
+label_cc$AMP_RELEASE=R
+set_hdcc$AMP_SUSTAIN=1
+set_hdcc$AMP_RELEASE=0
+
+//mod env
+label_cc$MOD_DELAY=Mod-Delay
+label_cc$MOD_ATTACK=Mod-A
+label_cc$MOD_HOLD=Mod-H
+label_cc$MOD_DECAY=Mod-D
+label_cc$MOD_SUSTAIN=Mod-S
+label_cc$MOD_RELEASE=Mod-R
+label_cc$MOD_PITCH=Mod > Pitch
+label_cc$MOD_FILTER=Mod > Filter
+set_hdcc$MOD_PITCH=0.5
+set_hdcc$MOD_FILTER=0.5
+
+//lfo1
+label_cc$LFO1_DELAY=Lfo1 Delay
+label_cc$LFO1_FREQ=Lfo1 Freq
+label_cc$LFO1_PITCH=Lfo1 > Pitch
+label_cc$LFO1_FILTER=Lfo1 > Filter
+label_cc$LFO1_VOLUME=Lfo1 > Volume
+set_hdcc$LFO1_FREQ=0.5
+
+//lfo2
+label_cc$LFO2_DELAY=Lfo2 Delay
+label_cc$LFO2_FREQ=Lfo2 Freq
+label_cc$LFO2_PITCH=Lfo2 > Pitch
+label_cc$LFO2_PAN=Lfo2 > Pan
+set_hdcc$LFO2_FREQ=0.5
+
+//veltrack
+label_cc$AMP_VEL=Amp.Vel
+set_hdcc$AMP_VEL=1
+
+//sample start
+label_cc$OFFSET=Offset
+
+//controller
+label_cc1=MW
+label_cc129=Chn.Aft
+label_cc11=Exp
+set_hdcc11=1
+
+// --------------------------------------
+
+<global>
+
+//main
+amplitude_oncc7=100
+amplitude_curvecc7=4
+pan_oncc10=100
+pan_curvecc10=1
+
+//filter
+cutoff=20
+cutoff_oncc$CUTOFF=9600
+resonance_oncc$RESO=24
+
+//amp env
+ampeg_delay_oncc$AMP_DELAY=5
+ampeg_delay_curvecc$AMP_DELAY=4
+ampeg_attack_oncc$AMP_ATTACK=10
+ampeg_attack_curvecc$AMP_ATTACK=4
+ampeg_hold_oncc$AMP_HOLD=10
+ampeg_hold_curvecc$AMP_HOLD=4
+ampeg_decay_oncc$AMP_DECAY=50
+ampeg_decay_curvecc$AMP_DECAY=4
+ampeg_sustain_oncc$AMP_SUSTAIN=-100
+ampeg_sustain_curvecc$AMP_SUSTAIN=2
+ampeg_release_oncc$AMP_RELEASE=50
+ampeg_release_curvecc$AMP_RELEASE=4
+
+//mod env
+eg15_time0_oncc$MOD_DELAY=5
+eg15_time0_curvecc$MOD_DELAY=4
+eg15_time1_oncc$MOD_ATTACK=10
+eg15_time1_curvecc$MOD_ATTACK=4
+eg15_time2_oncc$MOD_HOLD=10
+eg15_time2_curvecc$MOD_HOLD=4
+eg15_time3_oncc$MOD_DECAY=50
+eg15_time3_curvecc$MOD_DECAY=4
+eg15_level3_oncc$MOD_SUSTAIN=1
+eg15_level3_curvecc$MOD_SUSTAIN=4
+eg15_time4_oncc$MOD_RELEASE=50
+eg15_time4_curvecc$MOD_RELEASE=4
+eg15_pitch_oncc$MOD_PITCH=2400
+eg15_pitch_curvecc$MOD_PITCH=1
+eg15_cutoff_oncc$MOD_FILTER=9600
+eg15_cutoff_curvecc$MOD_FILTER=1
+eg15_level1=1
+eg15_level2=1
+eg15_sustain=3
+
+//lfo1
+lfo15_delay_oncc$LFO1_DELAY=2
+lfo15_fade_oncc$LFO1_DELAY=1
+lfo15_freq_oncc$LFO1_FREQ=20
+lfo15_freq_curvecc$LFO1_FREQ=4
+lfo15_pitch_oncc$LFO1_PITCH=1200
+lfo15_cutoff_oncc$LFO1_FILTER=9600
+lfo15_volume_oncc$LFO1_VOLUME=48
+volume_oncc$LFO1_VOLUME=-48
+
+//lfo2
+lfo16_delay_oncc$LFO2_DELAY=2
+lfo16_fade_oncc$LFO2_DELAY=1
+lfo16_freq_oncc$LFO2_FREQ=20
+lfo16_freq_curvecc$LFO2_FREQ=4
+lfo16_pitch_oncc$LFO2_PITCH=1200
+lfo16_pan_oncc$LFO2_PAN=200
+
+//veltrack
+amp_veltrack_oncc$AMP_VEL=-100
+amp_veltrack_curvecc$AMP_VEL=2
+fil_veltrack=2400
+
+//sample start
+offset_oncc$OFFSET=10000
+
+//controller
+lfo16_pitch_oncc1=50
+lfo16_pitch_oncc129=50
+amplitude_oncc11=100
+
+// --------------------------------------
+// place your regions here
+
+<region>
+sample=*saw
