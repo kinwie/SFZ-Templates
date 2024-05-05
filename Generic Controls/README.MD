@@ -10,12 +10,11 @@
 - Envelope Decay range 50 seconds.
 - Envelope Sustain is 100%
 - Envelope Release range 50 seconds.
-- Change anything to suits your workflow.
+- Change anything to suits your own workflows.
 
 # Notes :
-- Maximum default filter cutoff setting at 100%in sforzando is not fully open at 20kHz.
-- So if you don't want to use the filter, you can just commented out the filter opcode. Like this : //cutoff=20
-- At this time of writing, there is a limitation in sfizz for the `ampeg_sustain_oncc`, so there is a separate version for sfizz.
+- Maximum default filter cutoff setting at 100% in sforzando is not fully open at 20kHz. So, if you don't want to use the filter, you can just commented out the filter opcode. Like this : //cutoff=20
+- At this time of writing, there is a limitation in sfizz for the `ampeg_sustain_oncc`, so use the temporary version for sfizz.
 
 # License :
 None, free to use.
